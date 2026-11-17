@@ -1,0 +1,13 @@
+PING google.com (142.250.198.174): 56 data bytes
+92 bytes from 192.168.68.1: Time to live exceeded
+Vr HL TOS  Len   ID Flg  off TTL Pro  cks      Src      Dst
+ 4  5  00 5400 05f4   0 0000  01  01 58fb 192.168.68.105  142.250.198.174 
+
+Request timeout for icmp_seq 0
+92 bytes from 192.168.68.1: Time to live exceeded
+Vr HL TOS  Len   ID Flg  off TTL Pro  cks      Src      Dst
+ 4  5  00 5400 9fe0   0 0000  01  01 bf0e 192.168.68.105  142.250.198.174 
+
+
+--- google.com ping statistics ---
+2 packets transmitted, 0 packets received, 100.0% packet loss

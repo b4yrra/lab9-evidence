@@ -1,0 +1,7 @@
+TTL 1 -> 92 bytes from 192.168.68.1: Time to live exceeded
+TTL 2 -> 92 bytes from 192.168.1.1: Time to live exceeded
+TTL 3 -> 36 bytes from 10.184.0.1: Time to live exceeded
+TTL 4 -> * * *  (ICMP rate-limit / фильтр)
+TTL 5 -> 36 bytes from 10.128.14.34: Time to live exceeded
+TTL 6 -> 36 bytes from 180.149.97.29: Time to live exceeded
+TTL 7 -> 36 bytes from 180.149.92.57: Time to live exceeded

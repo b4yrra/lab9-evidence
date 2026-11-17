@@ -1,0 +1,49 @@
+local: en0 192.168.68.105 / 7a:ca:c5:77:f7:0b
+gateway: 192.168.68.1 / 10:27:f5:48:a5:90
+arp cache (4 entries):
+   192.168.68.1     -> 10:27:f5:48:a5:90
+   192.168.68.250   -> (incomplete)
+   192.168.68.255   -> ff:ff:ff:ff:ff:ff
+   224.0.0.251      -> 1:0:5e:0:0:fb
+
+ARP Request (PC -> Switch -> broadcast)
+   offset field                value
+  --------------------------------------------------------------
+      0-5 Ethernet Dest MAC    ff:ff:ff:ff:ff:ff
+     6-11 Ethernet Src MAC     7a:ca:c5:77:f7:0b
+    12-13 EtherType            0x0806 (ARP)
+    14-15 ARP Hardware type    1 (Ethernet)
+    16-17 ARP Protocol type    0x0800 (IPv4)
+       18 Hardware len         6 (MAC 6 байт)
+       19 Protocol len         4 (IP 4 байт)
+    20-21 ARP Opcode           1 (Request)
+    22-27 Sender MAC           7a:ca:c5:77:f7:0b
+    28-31 Sender IP            192.168.68.105
+    32-37 Target MAC           00:00:00:00:00:00
+    38-41 Target IP            192.168.68.1
+  frame урт: 42 байт (14 Ethernet + 28 ARP)
+  0000  ff ff ff ff ff ff 7a ca c5 77 f7 0b 08 06 00 01  |......z..w......|
+  0010  08 00 06 04 00 01 7a ca c5 77 f7 0b c0 a8 44 69  |......z..w....Di|
+  0020  00 00 00 00 00 00 c0 a8 44 01                    |........D.|
+
+ARP Reply (gateway -> PC, unicast)
+   offset field                value
+  --------------------------------------------------------------
+      0-5 Ethernet Dest MAC    7a:ca:c5:77:f7:0b
+     6-11 Ethernet Src MAC     10:27:f5:48:a5:90
+    12-13 EtherType            0x0806 (ARP)
+    14-15 ARP Hardware type    1 (Ethernet)
+    16-17 ARP Protocol type    0x0800 (IPv4)
+       18 Hardware len         6 (MAC 6 байт)
+       19 Protocol len         4 (IP 4 байт)
+    20-21 ARP Opcode           2 (Reply)
+    22-27 Sender MAC           10:27:f5:48:a5:90
+    28-31 Sender IP            192.168.68.1
+    32-37 Target MAC           7a:ca:c5:77:f7:0b
+    38-41 Target IP            192.168.68.105
+  frame урт: 42 байт (14 Ethernet + 28 ARP)
+  0000  7a ca c5 77 f7 0b 10 27 f5 48 a5 90 08 06 00 01  |z..w...'.H......|
+  0010  08 00 06 04 00 02 10 27 f5 48 a5 90 c0 a8 44 01  |.......'.H....D.|
+  0020  7a ca c5 77 f7 0b c0 a8 44 69                    |z..w....Di|
+
+incomplete entry шалгах: 192.168.68.250 -> (incomplete)

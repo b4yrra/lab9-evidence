@@ -1,0 +1,21 @@
+probe -> google.com (142.250.71.174)   count=4 timeout=2.0s
+seq  ttl type code     id   cksum   rtt_ms  meaning
+--------------------------------------------------------------------------------
+  1  114    0    0   4660 0xc05b   57.950  Echo Reply / Echo reply
+  reply bytes (IP + ICMP), first 44 bytes:
+  0000  45 80 1a 00 00 00 00 00 72 01 6c 95 8e fa 47 ae  |E.......r.l...G.|
+  0010  c0 a8 44 69 00 00 c0 5b 12 34 00 01 41 da bf 22  |..Di...[.4..A.."|
+  0020  c3 e2 b4 31 56 41 4e 54 41 2d 6c 61              |...1VANTA-la|
+  checksum check: ones-complement sum over ICMP message = 0xffff  (0xffff => header + data intact)
+  2  114    0    0   4660 0x08c6   58.259  Echo Reply / Echo reply
+  3  114    0    0   4660 0x4d4a   58.135  Echo Reply / Echo reply
+  4  114    0    0   4660 0x93e6   58.562  Echo Reply / Echo reply
+summary: sent=4 received=4 loss=0%
+
+probe -> 192.168.68.250 (192.168.68.250)   count=2 timeout=1.5s
+seq  ttl type code     id   cksum   rtt_ms  meaning
+--------------------------------------------------------------------------------
+  1    -    -    -      -       -  timeout  no ICMP reply
+  2    -    -    -      -       -  timeout  no ICMP reply
+summary: sent=2 received=0 loss=100%
+

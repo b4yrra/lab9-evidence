@@ -1,0 +1,3 @@
+ip 1491: 1 packets transmitted, 1 packets received, 0.0% packet loss
+ip 1492: 1 packets transmitted, 1 packets received, 0.0% packet loss
+ip 1493: 1 packets transmitted, 0 packets received, 100.0% packet loss
